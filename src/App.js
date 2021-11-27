@@ -48,9 +48,9 @@ function App() {
         <Progress  />
         <LanguageCode login={login}/>
 
-      {/*<div>*/}
-      {/*   <Footer/>*/}
-      {/*</div>*/}
+      <div>
+         <Footer/>
+      </div>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import progress from '../../img/Group 2929.svg'
-import './Progress.scss'
+import './Progress.css'
 
 const Progress = () => {
     return (
