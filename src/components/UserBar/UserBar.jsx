@@ -9,7 +9,6 @@ const UserBar = (props) => {
 
   return (
     <div className="UserBar">
-        <div className="UserBar__arrow"/>
         <p className="UserBar__name">Shambhavi Mishra</p>
         <img src={avatar_placeholder} className="UserBar__avatar"/>
         <div className="UserBar__notifications">
