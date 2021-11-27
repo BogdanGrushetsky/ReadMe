@@ -30,6 +30,15 @@
   margin-left: 0px;
 }
 
+.UserManage__button:hover {
+  background-color: #164ab9;
+}
+
+.UserManage__button:focus {
+  background-color: #164ab9;
+}
+
+
 .UserManage__arrow {
   width: 22px;
   height: 22px;
