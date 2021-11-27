@@ -1,0 +1,12 @@
+.footer_dino{
+    height: 303px;
+    width: 629px;
+    border-radius: 0px;
+}
+.footer_logo{
+    width: 346px;
+    height: 280px;
+}
+.footer_text{
+    border-top: 1px solid black;
+}

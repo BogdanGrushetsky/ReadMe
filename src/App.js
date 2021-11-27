@@ -14,6 +14,7 @@ import "./components/main.css"
 import Login from "./components/Login/Login";
 
 import "./components/main.css";
+import Footer from './components/Footer/Footer';
 
 function App() {
 
@@ -29,14 +30,17 @@ function App() {
           <MenuItem src={people} />
           <MenuItem src={settings} />
         </Menu>
+
         <div className="main__vertical">
           <UserBar/>
           <Task />
-
         </div>
-
       </div>
+
     </div>
+      </div>
+         <Footer/>
+      </div>
   );
 }
 
