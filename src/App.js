@@ -5,6 +5,9 @@ import { MenuItem } from "./components/Menu/Menu";
 import Menu from "./components/Menu/Menu";
 import Task from "./components/task/Task";
 import UserBar from './components/UserBar/UserBar';
+import UserManage from './components/UserManage/UserManage'
+
+import { Router } from 'react-router-dom'
 
 import people from "./img/Menu/people.svg"
 import settings from "./img/Menu/settings.svg"
@@ -22,22 +25,23 @@ function App() {
 
   return (
     <div>
-      <NavBar/>
         {active && <Login/>}
+      <NavBar/>
       <div className='main'>
         <Menu>
           <MenuItem src={dashboard} />
           <MenuItem src={people} />
           <MenuItem src={settings} />
         </Menu>
-
         <div className="main__vertical">
           <UserBar/>
+          <UserManage/>
         </div>
-      </div>
 
-      <div>
-         <Footer/>
+        <div>
+          <Footer/>
+        </div>
+
       </div>
     </div>
   );

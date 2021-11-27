@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+
+.UserManage__container {
+  display: flex;
+
+  font-family: 'Lato';
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.UserManage__container_text {
+  font-weight: 400;
+}
+
+.UserManage__form {
+  display: flex;
+
+  transition: display 0.5s;
+
+  flex-direction: column;
+}
+
+.UserManage__title {
+  padding-bottom: 69px;
+}
+
+.UserManage__button {
+  margin-top: 20px;
+  margin-left: 0px;
+}
+
+.UserManage__arrow {
+  width: 22px;
+  height: 22px;
+
+  transition: 0.5s;
+
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+
+  cursor: pointer;
+}
+
+.down {
+  rotate: 45deg;
+}
+
+.up {
+  rotate: -135deg;
+}
+
+.UserManage__input {
+
+  border-radius: 5px;
+
+  margin-top: 10px;
+
+  width: 700px;
+
+  border: none;
+
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.UserManage__container_children {
+  transition: visibility 0.5s height 0.5s;
+}
+
+.invisible {
+  visibility: hidden;
+  height: 0px;
+}
+
+.UserManage__checkbox {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.none {
+  display: none;
+}
+
