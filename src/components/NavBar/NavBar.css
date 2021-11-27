@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat+Alternates:wght@500&family=Montserrat:ital,wght@0,600;0,900;1,400&display=swap');
+
+:root {
+  --main-padding: 72px;
+}
+
+.NavBar {
+  display: flex;
+  
+  position: absolute;
+
+  width: 100%;
+  height: 75px;
+
+  border-bottom: 1px solid black;
+
+  flex-direction: row-reverse;
+
+  align-items:  flex-end;
+}
+
+.NavBar__container {
+  display: flex;
+
+  flex-direction: row-reverse;
+
+  align-items: flex-start;
+
+  margin-left: var(--main-padding);
+  margin-right: var(--main-padding);
+}
+
+.NavBar__link {
+  padding-left: 41.5px;
+  padding-bottom: 21px;
+  font-size: 1.125em;
+  
+  color:black;
+
+  font-family: "Montserrat Alternates";
+
+  text-decoration: none;
+}
+
+.NavBar__logo {
+  margin-right: auto;
+  position: absolute;
+
+  left: var(--main-padding);
+  top: 30px;
+  justify-self: flex-end;
+
+  width: 126px;
+  height: 24px;
+}
+
+.NavBar__burger {
+  display: none;
+  background-color: black;
+  width: 20px;
+}
+
+.NavBar__burger ::after {
+  width: 20px;
+}
+
+.NavBar__burger ::before {
+  width: 20px;
+}
+
+
+@media only screen and (max-width: 840PX) {
+  :root {
+    --main-padding: 1vw;
+  }
+
+  .NavBar__burger {
+    display: block;
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+    :root {
+      --main-padding: 1vw;
+    }
+    
+    .NavBar__link {
+      display: none;
+    }
+
+    .NavBar__link {
+      font-size: 14px
+    }
+  
+}
+
