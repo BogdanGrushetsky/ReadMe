@@ -13,6 +13,7 @@ import "./components/main.css"
 import Login from "./components/Login/Login";
 
 import "./components/main.css";
+import Footer from './components/Footer/Footer';
 
 function App() {
 
@@ -28,9 +29,10 @@ function App() {
           <MenuItem src={people} />
           <MenuItem src={settings} />
         </Menu>
-      </div>
       <Task />
-    </div>
+      </div>
+         <Footer/>
+      </div>
   );
 }
 
