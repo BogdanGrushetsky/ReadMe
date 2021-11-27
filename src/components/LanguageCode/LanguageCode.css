@@ -1,0 +1,68 @@
+.language-container {
+    position: absolute;
+    width: 536px;
+    height: 281px;
+    left: 338px;
+    top: 804px;
+
+    background: #FFD4AD;
+    border-radius: 24px;
+}
+
+.language-title {
+    width: 78px;
+    height: 26px;
+    padding-left: 40px;
+    padding-top: 20px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    color: #664938;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+.language-header {
+    height: 80px;
+    border-bottom:4px solid #FFBC94;;
+    display: flex;
+    justify-content: start;
+}
+
+.language-content {
+    margin-top: 13px;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.language-block {
+    background: #FAC09A;
+    border-radius: 16px;
+    width: 144px;
+    height: 161px;
+}
+
+.icon {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.add-icon {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 60px;
+}
+
+.language-name {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 20px;
+    color: #664938;
+    margin-top: 40px;
+    margin-left: 20px;
+}

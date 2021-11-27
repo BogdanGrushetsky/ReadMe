@@ -15,6 +15,7 @@ import Login from "./components/Login/Login";
 
 import "./components/main.css";
 import Footer from './components/Footer/Footer';
+import LanguageCode from "./components/LanguageCode/LanguageCode";
 
 function App() {
 
@@ -35,10 +36,11 @@ function App() {
           <UserBar/>
         </div>
       </div>
+        <LanguageCode/>
 
-      <div>
-         <Footer/>
-      </div>
+      {/*<div>*/}
+      {/*   <Footer/>*/}
+      {/*</div>*/}
     </div>
   );
 }

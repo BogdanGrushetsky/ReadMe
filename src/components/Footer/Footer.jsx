@@ -5,7 +5,7 @@ import "../Footer/Footer.css"
 
 const Footer=(props)=>{
     return(
-    <Container fluid>
+    <Container fluid className='footer-container'>
     <Row>
         <Col md="4">
         <img src={dino} className="footer_dino" />
