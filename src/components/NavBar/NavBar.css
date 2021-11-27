@@ -44,9 +44,16 @@
   text-decoration: none;
 }
 
-.NavBar__link:hover {
+.NavBar__link:hover{
   color: #363636;
+  font-size: 1.2em;
 }
+
+.NavBar__link:focus{
+  color: #363636;
+  outline: none;
+}
+
 
 .NavBar__logo {
   margin-right: auto;

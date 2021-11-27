@@ -1,7 +1,13 @@
 .main {
   padding-left: 72px;
-  
+  padding-right: 144px;
   padding-top: calc(76px + 50px);
 
+
   height: 100vh;
+}
+
+.main__vertical {
+  display: flex;
+  flex-direction: column;
 }
