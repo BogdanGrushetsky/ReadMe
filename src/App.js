@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar/NavBar";
 import { MenuItem } from "./components/Menu/Menu";
 import Menu from "./components/Menu/Menu";
 import UserBar from './components/UserBar/UserBar';
+import UserManage from './components/UserManage/UserManage'
 import people from "./img/Menu/people.svg"
 import settings from "./img/Menu/settings.svg"
 import dashboard from "./img/Menu/dashboard.svg"
@@ -41,6 +42,7 @@ function App() {
 
         <div className="main__vertical">
           <UserBar/>
+          <UserManage/>
         </div>
       </div>
         <Progress  />

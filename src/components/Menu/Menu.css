@@ -12,6 +12,8 @@
   background-color: #FCEEC3;
 
   border-radius: 18px;
+
+  z-index: 10;
 }
 
 .Menu__item {
