@@ -1,5 +1,5 @@
 import style from "./NavBar.css"
-import logo from "./../../img/logo_with_name.svg"
+import logo from "./../../img/NavBar/logo_with_name.svg"
 
 const Link = (props) => {
   return <a className="NavBar__link" href={props.href}>{props.children}</a>

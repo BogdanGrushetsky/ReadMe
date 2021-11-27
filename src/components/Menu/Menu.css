@@ -1,0 +1,24 @@
+
+.Menu {
+  height: 1481px;
+  width: 118px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background-color: #FCEEC3;
+
+  border-radius: 18px;
+}
+
+.Menu__item {
+  justify-self: center;
+  
+  
+}
+
+.Menu__item_selected {
+
+}

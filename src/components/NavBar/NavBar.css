@@ -42,6 +42,10 @@
   text-decoration: none;
 }
 
+.NavBar__link:hover {
+  color: #363636;
+}
+
 .NavBar__logo {
   margin-right: auto;
   position: absolute;
@@ -54,19 +58,6 @@
   height: 24px;
 }
 
-.NavBar__burger {
-  display: none;
-  background-color: black;
-  width: 20px;
-}
-
-.NavBar__burger ::after {
-  width: 20px;
-}
-
-.NavBar__burger ::before {
-  width: 20px;
-}
 
 
 @media only screen and (max-width: 840PX) {
