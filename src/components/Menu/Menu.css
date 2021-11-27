@@ -1,12 +1,12 @@
 
 .Menu {
-  height: 1481px;
   width: 118px;
 
   display: flex;
+  
+  flex-direction: column;
 
   align-items: center;
-  justify-content: center;
 
   background-color: #FCEEC3;
 
@@ -14,11 +14,32 @@
 }
 
 .Menu__item {
-  justify-self: center;
+  width: 57px;
+  height: 57px;
+
+  display: flex;
   
-  
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 40px;
+
+  border-radius: 15px;
 }
 
-.Menu__item_selected {
+.Menu__item:hover {
+  background: linear-gradient(99.54deg, #3E3E61 7.46%, #2E2E48 95.68%);
+  color: white;
+}
 
+
+.Menu__User {
+  margin-top:61px;
+
+  text-align: center;
+}
+
+
+.Menu__item_selected {
+  background: linear-gradient(99.54deg, #3E3E61 7.46%, #2E2E48 95.68%);
 }
