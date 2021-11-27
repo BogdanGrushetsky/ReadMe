@@ -33,7 +33,6 @@ function App() {
 
         <div className="main__vertical">
           <UserBar/>
-          <Task />
         </div>
       </div>
 
