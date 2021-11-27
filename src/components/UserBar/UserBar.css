@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat+Alternates:wght@500&family=Montserrat:ital,wght@0,600;0,900;1,400&family=Nunito:wght@700&display=swap');
+
+
+.UserBar {
+  display: inline-flex;
+  flex-direction: row-reverse;
+
+  align-items: center;
+}
+
+.UserBar__avatar {
+  width: 59px;
+  padding-right: 16px;
+}
+
+.UserBar__notifications {
+  padding-right: 36px;
+  width: 40px;
+  height: 40px;
+}
+
+.UserBar__notifications img {
+  cursor: pointer;
+}
+
+.UserBar__name {
+  font-family: 'Nunito';
+  padding-right: 72px;
+  font-size: 1.56em;
+  font-weight: bold;
+}
+
+.UserBar__arrow {
+  rotate: 45deg;
+  
+  width: 22px;
+  height: 22px;
+  
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+
+  cursor: pointer;
+}
+
+.UserBar__circle {
+  position: relative;
+  z-index: 999;
+  left: 22px;
+  top: 10px;
+  background-color: #F26545;
+  width: 12px;
+  height: 12px;
+
+  border-radius: 999px;
+
+}
