@@ -1,5 +1,6 @@
 
 .Menu {
+  position: fixed;
   width: 118px;
 
   display: flex;
