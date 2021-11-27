@@ -1,26 +1,31 @@
-import React from 'react';
-import people from "./img/Menu/people.svg"
+import React, {useState} from 'react';
 
 import NavBar from './components/NavBar/NavBar';
-
 import { MenuItem } from './components/Menu/Menu';
 import Menu from './components/Menu/Menu';
+
+import people from "./img/Menu/people.svg"
+import settings from "./img/Menu/settings.svg"
+import dashboard from "./img/Menu/dashboard.svg"
 
 import "./components/main.css"
 import Login from "./components/Login/Login";
 
+
 function App() {
+
+   const [active, setActive] = useState(false)
+
   return (
     <div>
       <NavBar/>
-        <Login/>
+        {active && <Login/>}
       <div className='main'>
-
-        {/*<Menu>*/}
-        {/*  <MenuItem src={people}/>*/}
-        {/*  */}
-        {/*</Menu>*/}
-
+        <Menu>
+          <MenuItem src={dashboard}/>
+          <MenuItem src={people}/>
+          <MenuItem src={settings}/>
+        </Menu>
       </div>
 
     </div>
