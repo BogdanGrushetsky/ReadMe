@@ -1,11 +1,21 @@
 import React, {useState} from 'react';
 import './Login.css';
+import axios from "axios";
 
-const Login = () => {
+const Login = ({removeLogin}) => {
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [email, setEmail ] = useState('')
+    const [password, setPassword ] = useState('')
 
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const newInfo = {email:email, password:password};
+        axios.post('https://read-me.azurewebsites.net/api/Auth/Login', newInfo)
+            .then(res => localStorage.setItem('accessToken', res.data.token))
+            .catch(error =>alert(error.response.data.message))
+            .finally(removeLogin())
+    }
 
     return (
         <div className='login-container'>
@@ -15,15 +25,14 @@ const Login = () => {
                     Create an account to enjoy all the services without any ads for free!
                 </div>
                 <div className='login-form'>
-                    <form >
+                    <form onSubmit={handleSubmit}>
                         <input  className='input-email' type='email' placeholder='Email'
                                 value={email} onChange={(e) => setEmail(e.target.value)}/>
                         <input  className='input-email' type='password' placeholder='Password'
                                 value={password} onChange={(e) => setPassword(e.target.value)}/>
+                        <button >Login</button>
                     </form>
                 </div>
-
-                <button>Login</button>
                 <div className='login-add-text'>Already Have An Account? <a href='#'>Sign In</a> </div>
             </div>
         </div>

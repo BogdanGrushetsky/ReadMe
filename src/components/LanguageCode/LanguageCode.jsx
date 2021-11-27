@@ -5,11 +5,13 @@ import css from '../../img/design 1.png'
 import './LanguageCode.css'
 
 
-const LanguageCode = () => {
 
+const LanguageCode = ({login}) => {
 
     const redirectToTasks = () => {
-       console.log('redirect to ...')
+        if(!localStorage.getItem('accessToken')){
+            login()
+        }
     }
 
     return (
