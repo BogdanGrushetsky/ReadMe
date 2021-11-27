@@ -28,8 +28,12 @@
 }
 
 .Menu__item:hover {
-  background: linear-gradient(99.54deg, #3E3E61 7.46%, #2E2E48 95.68%);
-  color: white;
+  cursor: pointer;
+  background: linear-gradient(99.54deg, #3E3E61 7.46%, #2E2E48 95.68%); 
+}
+
+.Menu__item:hover img {
+  filter: brightness(9999) grayscale(100%);
 }
 
 
