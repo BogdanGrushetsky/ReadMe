@@ -12,24 +12,25 @@ import "./components/main.css"
 import Login from "./components/Login/Login";
 import "./components/main.css";
 import Footer from './components/Footer/Footer';
-import LanguageCode from "./components/LanguageCode/LanguageCode";
-import Progress from "./components/Progress";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import LangNProgress from './components/LanguageNProgress/LangNProg';
 
 
 function App() {
 
-   const [active, setActive] = useState(false);
+  const [active, setActive] = useState(false);
 
-   const login = () => {
-       setActive(true)
-   }
+  const login = () => {
+    setActive(true)
+  }
 
-   const removeLogin = () => {
-       setActive(false)
-       //localStorage.removeItem('accessToken')
-   }
+  const removeLogin = () => {
+    setActive(false)
+    //localStorage.removeItem('accessToken')
+}
 
   return (
+    
     <div>
       <NavBar/>
         {active && <Login setActive={setActive} removeLogin={removeLogin}/>}
@@ -42,14 +43,21 @@ function App() {
 
         <div className="main__vertical">
           <UserBar/>
-          <UserManage/>
+
+          <Routes>
+
+          <Route path="/settings" element={<UserManage/>}/>
+             
+          <Route path="/cabinet" element={<LangNProgress login={login}/>}/>
+
+          </Routes>
+        
         </div>
-      </div>
-        <Progress  />
-        <LanguageCode login={login}/>
 
       <div>
          <Footer/>
+      </div>
+
       </div>
     </div>
   );
