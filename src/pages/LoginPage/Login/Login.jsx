@@ -18,11 +18,12 @@ const Login = ({removeLogin}) => {
             headers: {'Authorization': 'Bearer ' + token}
         })
 
-         instance.get('/Account/PersonalInformation').then((res) => {
+        await instance.get('/Account/PersonalInformation').then((res) => {
             localStorage.setItem('user', JSON.stringify(res.data))
         }).catch((err) => {
             alert(err.response.data.message)
         })
+        console.log(1)
     }
 
 
@@ -30,9 +31,10 @@ const Login = ({removeLogin}) => {
         e.preventDefault();
         const newInfo = {email:email, password:password};
         await axios.post('https://read-me.azurewebsites.net/api/Auth/Login', newInfo)
-            .then(res => {
-                localStorage.setItem('accessToken', res.data.token)
-                getUser(res.data.token)
+            .then(async res =>{
+                localStorage.setItem('accessToken', res.data.token);
+                await getUser(res.data.token);
+                console.log(2)
                 navigate("/cabinet")
             })
             .catch(error =>alert(error.response.data.message))
