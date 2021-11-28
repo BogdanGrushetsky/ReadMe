@@ -6,7 +6,7 @@ import './CabinetPage.css'
 
 const CabinetPage = (props) => {
 
-    const res = JSON.parse(localStorage.getItem('user'));
+    const res = JSON.parse(localStorage.getItem('user')) || {};
 
     if(res) {
     }

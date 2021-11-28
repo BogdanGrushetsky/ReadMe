@@ -43,9 +43,6 @@ const PasswordForm = (props) => {
 
   const handlePassSubmit = (e) => {
     e.preventDefault()
-    
-
-
   }
   
   return(
@@ -75,9 +72,9 @@ const ProfileForm = (props) => {
   const [email, setEmail] = useState();
 
   useEffect(()=> {
-    setName(props.firstName);
-    setSurname(props.lastName)
-    setEmail(props.email)
+    setName(props.firstName || '');
+    setSurname(props.lastName || '')
+    setEmail(props.email || '')
   }, [])
 
   return (
@@ -101,7 +98,9 @@ const ProfileForm = (props) => {
 
 const UserManage = (props) => {
 
-  const user = JSON.parse(localStorage.getItem('user'));
+  const user = JSON.parse(localStorage.getItem('user')) || {};
+
+
 
   return ( 
   <>
