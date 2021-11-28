@@ -43,9 +43,6 @@ const PasswordForm = (props) => {
 
   const handlePassSubmit = (e) => {
     e.preventDefault()
-    
-
-
   }
   
   return(
@@ -67,12 +64,29 @@ const PasswordForm = (props) => {
 }
 
 const ProfileForm = (props) => {
+
+  const [name, setName] = useState();
+
+  const [surname, setSurname] = useState();
+
+  const [email, setEmail] = useState();
+
+  useEffect(()=> {
+    setName(props.firstName || '');
+    setSurname(props.lastName || '')
+    setEmail(props.email || '')
+  }, [])
+
   return (
     <>
     <form className="UserManage__form" onSubmit={(e)=>e.preventDefault()}>
-        <input className='UserManage__input' type='text' placeholder='Dilara'/>
-        <input className='UserManage__input' type='text' placeholder='Matraci'/>
-        <input className='UserManage__input' type='email' placeholder='dmatraci@somemail.com'/>
+        <input className='UserManage__input' type='text' placeholder='Dilara'
+          value={name} onChange={(e)=>{setName(e.target.value)}}/>
+        <input className='UserManage__input' type='text' placeholder='Matraci'
+          value={surname} onChange={(e)=>{setSurname(e.target.value)}}/>
+        
+        <input className='UserManage__input' type='email' placeholder='dmatraci@somemail.com'
+          value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
         
         <button className='UserManage__button'>Створити</button>
       
@@ -84,7 +98,9 @@ const ProfileForm = (props) => {
 
 const UserManage = (props) => {
 
-  const user = JSON.parse(localStorage.getItem('user'));
+  const user = JSON.parse(localStorage.getItem('user')) || {};
+
+
 
   return ( 
   <>
@@ -95,7 +111,9 @@ const UserManage = (props) => {
       title="Profile" 
       description="Ім'я, фамілія, імейл адресса"
     > 
-      <ProfileForm/>
+      <ProfileForm
+        email={user.email} firstName={user.firstName} lastName={user.lastName}
+      />
     </Container>
 
     <Container 

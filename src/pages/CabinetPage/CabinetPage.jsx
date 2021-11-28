@@ -6,7 +6,7 @@ import './CabinetPage.css'
 
 const CabinetPage = (props) => {
 
-    const res = JSON.parse(localStorage.getItem('user'));
+    const res = JSON.parse(localStorage.getItem('user')) || {};
 
     if(res) {
     }
@@ -15,7 +15,7 @@ const CabinetPage = (props) => {
     return (
         <div>
             {res &&  <div className='cabinet-greetings'>
-                Привіт, {res.firstName || `xedfxt`}!
+                Привіт, {res.firstName || 'чувачок'}!
                 </div> }
 
             <div className='cabinet-ques'>Як твій день?</div>

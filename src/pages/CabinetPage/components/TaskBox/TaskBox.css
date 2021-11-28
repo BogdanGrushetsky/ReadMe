@@ -8,6 +8,7 @@
     border-radius: 24px;
 }
 
+
 .task-header {
     padding-top:20px;
     padding-left: 43px;
@@ -26,8 +27,16 @@
 }
 
 .task-name {
+
     font-size: 19px;
     line-height: 23px;
+    padding-top: 20px;
     color: #4C4D45;
     font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+.task-name a:hover {
+    text-decoration: none;
+    color: #4C4D45;
 }
