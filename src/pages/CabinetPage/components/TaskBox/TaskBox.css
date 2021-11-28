@@ -1,0 +1,33 @@
+.task-container {
+    position: absolute;
+    width: 322px;
+    height: 323px;
+    left: 1262px;
+    top: 276px;
+    background: #B3D58F;
+    border-radius: 24px;
+}
+
+.task-header {
+    padding-top:20px;
+    padding-left: 43px;
+    height: 64px;
+    border-bottom:4px solid #B8DB8F ;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 27px;
+    font-family: 'Nunito', sans-serif;
+    color: #495738;
+}
+
+.task-block {
+    text-align: center;
+    margin-top: 22px;
+}
+
+.task-name {
+    font-size: 19px;
+    line-height: 23px;
+    color: #4C4D45;
+    font-family: 'Nunito', sans-serif;
+}

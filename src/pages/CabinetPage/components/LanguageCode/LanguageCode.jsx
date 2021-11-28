@@ -1,7 +1,7 @@
 import React from 'react';
-import add from '../../img/Vector.png'
-import html from '../../img/bar_chart 1.png'
-import css from '../../img/design 1.png'
+import add from '../../../../img/Vector.png'
+import html from '../../../../img/bar_chart 1.png'
+import css from '../../../../img/design 1.png'
 import './LanguageCode.css'
 
 

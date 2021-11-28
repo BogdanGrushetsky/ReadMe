@@ -14,7 +14,7 @@ const Login = ({removeLogin}) => {
         axios.post('https://read-me.azurewebsites.net/api/Auth/Login', newInfo)
             .then(res => localStorage.setItem('accessToken', res.data.token))
             .catch(error =>alert(error.response.data.message))
-            .finally(removeLogin())
+            // якщо вийде, то добав history.push('/шото')
     }
 
     return (

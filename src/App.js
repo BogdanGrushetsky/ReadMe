@@ -9,11 +9,12 @@ import people from "./img/Menu/people.svg"
 import settings from "./img/Menu/settings.svg"
 import dashboard from "./img/Menu/dashboard.svg"
 import "./components/main.css"
-import Login from "./components/Login/Login";
 import "./components/main.css";
 import Footer from './components/Footer/Footer';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import LangNProgress from './components/LanguageNProgress/LangNProg';
+import LangNProgress from './pages/CabinetPage/components/LanguageNProgress/LangNProg';
+import CabinetPage from "./pages/CabinetPage";
+import LoginPage from "./pages/LoginPage/LoginPage";
 
 
 function App() {
@@ -29,11 +30,21 @@ function App() {
     //localStorage.removeItem('accessToken')
 }
 
+    // if(!localStorage.getItem('accessToken')) {
+    //     return (
+    //         <Routes>
+    //             <Route exact path='/login' element={<LoginPage/>} />
+    //         </Routes>
+    //
+    //     )
+    // }
+    // поки закоментила, щоб не заважало
+
   return (
     
     <div>
       <NavBar/>
-        {active && <Login setActive={setActive} removeLogin={removeLogin}/>}
+        {active && <LoginPage setActive={setActive} removeLogin={removeLogin}/>}
       <div className='main'>
         <Menu>
           <MenuItem src={dashboard} />
@@ -48,7 +59,7 @@ function App() {
 
           <Route path="/settings" element={<UserManage/>}/>
              
-          <Route path="/cabinet" element={<LangNProgress login={login}/>}/>
+          <Route path="/cabinet" element={<CabinetPage login={login}/>}/>
 
           </Routes>
         

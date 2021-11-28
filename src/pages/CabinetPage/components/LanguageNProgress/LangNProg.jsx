@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import LanguageCode from "../LanguageCode/LanguageCode";
-import Progress from "../Progress";
+import Progress from "../../../../components/Progress";
 
 const LangNProgress = (props) => {
 
