@@ -3,6 +3,7 @@ import './Login.css';
 import axios from "axios";
 
 import { useNavigate } from 'react-router';
+import {Link} from "react-router-dom";
 
 const Login = ({removeLogin}) => {
 
@@ -17,7 +18,7 @@ const Login = ({removeLogin}) => {
             headers: {'Authorization': 'Bearer ' + token}
         })
 
-        instance.get('/Account/PersonalInformation').then((res) => {
+         instance.get('/Account/PersonalInformation').then((res) => {
             localStorage.setItem('user', JSON.stringify(res.data))
         }).catch((err) => {
             alert(err.response.data.message)
@@ -25,10 +26,10 @@ const Login = ({removeLogin}) => {
     }
 
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const newInfo = {email:email, password:password};
-        axios.post('https://read-me.azurewebsites.net/api/Auth/Login', newInfo)
+        await axios.post('https://read-me.azurewebsites.net/api/Auth/Login', newInfo)
             .then(res => {
                 localStorage.setItem('accessToken', res.data.token)
                 getUser(res.data.token)
@@ -43,7 +44,7 @@ const Login = ({removeLogin}) => {
             <div className='login-content'>
                 <div className='login-title'>Login</div>
                 <div className='login-text'>
-                    Create an account to enjoy all the services without any ads for free!
+                    Enter your login and password to log in!
                 </div>
                 <div className='login-form'>
                     <form onSubmit={handleSubmit}>
@@ -54,7 +55,7 @@ const Login = ({removeLogin}) => {
                         <button >Login</button>
                     </form>
                 </div>
-                <div className='login-add-text'>Already Have An Account? <a href='#'>Sign In</a> </div>
+                <div className='login-add-text'>Don't have an account?<Link to='/register'> Register here</Link> </div>
             </div>
         </div>
     );

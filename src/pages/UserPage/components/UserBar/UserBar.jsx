@@ -11,7 +11,7 @@ const UserBar = (props) => {
 
   return (
     <div className="UserBar">
-        <p className="UserBar__name">{user.lastName} {user.firstName}</p>
+        {/*<p className="UserBar__name">{user.lastName} {user.firstName}</p>*/}
         <img src={avatar_placeholder} className="UserBar__avatar"/>
         <div className="UserBar__notifications">
           <div className="UserBar__circle" 

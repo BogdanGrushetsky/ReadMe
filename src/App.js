@@ -9,6 +9,7 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import UserPage from './pages/UserPage/UserPage';
 
 import UserManage from './pages/UserPage/components/UserManage/UserManage'
+import RegisterPage from "./pages/RegisterPage/RegisterPage";
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
       <Routes>
 
       <Route path='/login' element={<LoginPage/>}/>
+      <Route path='/register' element={<RegisterPage/>}/>
 
       <Route path='/settings' element={
         <UserPage> 

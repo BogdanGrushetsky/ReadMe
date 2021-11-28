@@ -2,18 +2,21 @@ import React from 'react';
 import add from '../../../../img/Vector.png'
 import html from '../../../../img/bar_chart 1.png'
 import css from '../../../../img/design 1.png'
+import {useNavigate} from "react-router";
 import './LanguageCode.css'
 
 
 
 const LanguageCode = ({login}) => {
 
+    const navigate = useNavigate()
+
     const redirectToTasks = () => {
         if(!localStorage.getItem('accessToken')){
-            login()
-        }
-        localStorage.removeItem('accessToken')
-        localStorage.removeItem('user')
+            navigate('/login')
+        } else navigate('/tasks')
+        //localStorage.removeItem('accessToken')
+        //localStorage.removeItem('user')
     }
 
     return (
