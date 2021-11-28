@@ -11,14 +11,14 @@ const UserBar = (props) => {
 
   return (
     <div className="UserBar">
-        <p className="UserBar__name">{user.lastName || ' '} {user.firstName || ' '}</p>
-        <img src={avatar_placeholder} className="UserBar__avatar"/>
-        <div className="UserBar__notifications">
-          <div className="UserBar__circle" 
-            style={ notifications ? {display:'block'} : {display: 'none'}}
-          />
-          <img src={notification}/>
-        </div>
+      <p className="UserBar__name">{user.lastName || ' '} {user.firstName || ' '}</p>
+      <img src={avatar_placeholder} className="UserBar__avatar"/>
+      <div className="UserBar__notifications">
+        <div className="UserBar__circle" 
+          style={ notifications ? {display:'block'} : {display: 'none'}}
+        />
+        <img src={notification}/>
+      </div>
 
     </div>
   )

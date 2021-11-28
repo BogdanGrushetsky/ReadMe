@@ -15,7 +15,7 @@ const CabinetPage = (props) => {
     return (
         <div>
             {res &&  <div className='cabinet-greetings'>
-                Привіт, {res.firstName || `xedfxt`}!
+                Привіт, {res.firstName || 'чувачок'}!
                 </div> }
 
             <div className='cabinet-ques'>Як твій день?</div>

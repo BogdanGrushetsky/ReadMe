@@ -9,6 +9,9 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import UserPage from './pages/UserPage/UserPage';
 
 import UserManage from './pages/UserPage/components/UserManage/UserManage'
+import RegisterPage from "./pages/RegisterPage/RegisterPage";
+
+import AboutUs from './pages/AboutUsPage';
 
 function App() {
 
@@ -19,8 +22,10 @@ function App() {
   useEffect(() => {
     if(!localStorage.getItem('accessToken')) {
       navigate('/login');
-      console.log(2)
-    }   
+    }
+    else {
+      //navigate('/cabinet')
+    }
   }, [])
 
   const login = () => {
@@ -37,6 +42,9 @@ function App() {
       <Routes>
 
       <Route path='/login' element={<LoginPage/>}/>
+      <Route path='/register' element={<RegisterPage/>}/>
+
+      <Route path='/aboutUs' element={<AboutUs/>}/>
 
       <Route path='/settings' element={
         <UserPage> 
