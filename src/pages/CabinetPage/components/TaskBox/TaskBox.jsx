@@ -11,7 +11,7 @@ const TaskBox = () => {
 
         for (let i=0; i < amount; i++) {
             arr[i] = (<div className='task-name'> 
-                        <a href={url + 'id='+i}> Таск "{titles[i]}" </a>
+                        <a href={url + 'id='+i}> Завдання "{titles[i]}" </a>
                     </div>)
         }
 
