@@ -1,7 +1,7 @@
 import { Row,Col,Container } from "react-bootstrap";
-import dino from "../../img/Footer/dino.svg";
-import logo from "./../../img/NavBar/logo_with_name.svg"
-import "../Footer/Footer.css"
+import dino from "./../../../../img/Footer/dino.svg";
+import logo from "./../../../../img/NavBar/logo_with_name.svg"
+import "./Footer.css"
 
 const Footer=(props)=>{
     return(

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './UserManage.css';
 
 const Container = (props) => {
@@ -11,7 +11,6 @@ const Container = (props) => {
       <div className="UserManage__container_text">
         <h2>{props.title}</h2>
         <p>{props.description}</p>
-
       </div>
     <div className={"UserManage__arrow " + (arrowState ? 'up': 'down')}
          onClick={() => setArrowState(!arrowState)}/>
@@ -35,12 +34,33 @@ const NotificationsForm = (props) => {
 }
 
 const PasswordForm = (props) => {
-  return(
-    <form className="UserManage__form">
-      <input className="UserManage__input" type="password" placeholder="strongPassword"/>
-      <input className="UserManage__input" type="password" placeholder="strongPassword"/>
 
-      <button className="UserManage__button">Submit</button>
+  const [curPassword, setCurPassword] = useState('')
+
+  const [newPassword, setNewPassword] = useState('')
+  const [repPassword, setRepPassword] = useState('')
+
+
+  const handlePassSubmit = (e) => {
+    e.preventDefault()
+    
+
+
+  }
+  
+  return(
+    <form className="UserManage__form" onSubmit={handlePassSubmit}>
+      <input className="UserManage__input" type="password" placeholder="Current Passoword"
+        value={curPassword} onChange={(e)=>setCurPassword(e.target.value)}
+      />
+      <input className="UserManage__input" type="password" placeholder="New Password"
+        value={newPassword} onChange={(e)=>setNewPassword(e.target.value)}
+      />
+      <input className="UserManage__input" type="password" placeholder="Repeat New Passowrd"
+        value={repPassword} onChange={(e)=>setRepPassword(e.target.value)}
+      />
+
+      <button className="UserManage__button">Змінити</button>
 
     </form>
   )
@@ -49,12 +69,12 @@ const PasswordForm = (props) => {
 const ProfileForm = (props) => {
   return (
     <>
-    <form className="UserManage__form">
+    <form className="UserManage__form" onSubmit={(e)=>e.preventDefault()}>
         <input className='UserManage__input' type='text' placeholder='Dilara'/>
         <input className='UserManage__input' type='text' placeholder='Matraci'/>
         <input className='UserManage__input' type='email' placeholder='dmatraci@somemail.com'/>
         
-        <button className='UserManage__button'>Submit</button>
+        <button className='UserManage__button'>Створити</button>
       
     </form>
     </>
@@ -63,6 +83,9 @@ const ProfileForm = (props) => {
 
 
 const UserManage = (props) => {
+
+  const user = JSON.parse(localStorage.getItem('user'));
+
   return ( 
   <>
 
@@ -70,14 +93,14 @@ const UserManage = (props) => {
 
     <Container 
       title="Profile" 
-      description="Name, Surname, Email address"
+      description="Ім'я, фамілія, імейл адресса"
     > 
       <ProfileForm/>
     </Container>
 
     <Container 
       title="Password" 
-      description="Your email address is dmataraci@gmail.com"
+      description={"Ваша імейл адресса: " + user.email}
     > 
       <PasswordForm/>
     </Container>

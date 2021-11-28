@@ -7,6 +7,7 @@
 
   justify-content: space-between;
   align-items: center;
+
 }
 
 .UserManage__container_text {
@@ -60,7 +61,6 @@
 }
 
 .UserManage__input {
-
   border-radius: 5px;
 
   margin-top: 10px;

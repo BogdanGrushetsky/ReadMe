@@ -1,25 +1,27 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
-import NavBar from "./components/NavBar/NavBar";
-import { MenuItem } from "./components/Menu/Menu";
-import Menu from "./components/Menu/Menu";
-import UserBar from './components/UserBar/UserBar';
-import UserManage from './components/UserManage/UserManage'
-import people from "./img/Menu/people.svg"
-import settings from "./img/Menu/settings.svg"
-import dashboard from "./img/Menu/dashboard.svg"
+
 import "./components/main.css"
 import "./components/main.css";
-import Footer from './components/Footer/Footer';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import LangNProgress from './pages/CabinetPage/components/LanguageNProgress/LangNProg';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import CabinetPage from "./pages/CabinetPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
+import UserPage from './pages/UserPage/UserPage';
 
+import UserManage from './pages/UserPage/components/UserManage/UserManage'
 
 function App() {
 
   const [active, setActive] = useState(false);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if(!localStorage.getItem('accessToken')) {
+      navigate('/login');
+      console.log(2)
+    }   
+  }, [])
 
   const login = () => {
     setActive(true)
@@ -29,48 +31,27 @@ function App() {
     setActive(false)
     //localStorage.removeItem('accessToken')
 }
-
-    // if(!localStorage.getItem('accessToken')) {
-    //     return (
-    //         <Routes>
-    //             <Route exact path='/login' element={<LoginPage/>} />
-    //         </Routes>
-    //
-    //     )
-    // }
     // поки закоментила, щоб не заважало
 
   return (
+      <Routes>
+
+      <Route path='/login' element={<LoginPage/>}/>
+
+      <Route path='/settings' element={
+        <UserPage> 
+          <UserManage/>
+        </UserPage>}
+        />
+
+
+      <Route path='/cabinet' element={
+        <UserPage> 
+          <CabinetPage/>
+        </UserPage>}
+        />
     
-    <div>
-      <NavBar/>
-        {active && <LoginPage setActive={setActive} removeLogin={removeLogin}/>}
-      <div className='main'>
-        <Menu>
-          <MenuItem src={dashboard} />
-          <MenuItem src={people} />
-          <MenuItem src={settings} />
-        </Menu>
-
-        <div className="main__vertical">
-          <UserBar/>
-
-          <Routes>
-
-          <Route path="/settings" element={<UserManage/>}/>
-             
-          <Route path="/cabinet" element={<CabinetPage login={login}/>}/>
-
-          </Routes>
-        
-        </div>
-
-      <div>
-         <Footer/>
-      </div>
-
-      </div>
-    </div>
+      </Routes>
   );
 }
 
