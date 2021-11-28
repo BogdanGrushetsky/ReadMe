@@ -7,10 +7,11 @@ const TaskBox = () => {
 
     const genTasks = (amount) => {
         const arr = []
+        const titles = ["Списки", "Маінпейдж", "Заголовок", "Векторна піраміда", "Вектор" ]
 
         for (let i=0; i < amount; i++) {
             arr[i] = (<div className='task-name'> 
-                        <a href={url + 'id='+i}> Task {i + 1} </a>
+                        <a href={url + 'id='+i}> Таск "{titles[i]}" </a>
                     </div>)
         }
 
