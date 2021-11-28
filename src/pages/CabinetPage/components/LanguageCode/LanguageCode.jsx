@@ -13,6 +13,7 @@ const LanguageCode = ({login}) => {
             login()
         }
         localStorage.removeItem('accessToken')
+        localStorage.removeItem('user')
     }
 
     return (

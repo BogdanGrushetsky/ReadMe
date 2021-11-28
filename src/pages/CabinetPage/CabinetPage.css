@@ -1,0 +1,20 @@
+.cabinet-greetings {
+    position: absolute;
+    height: 124px;
+    left: 343px;
+    top: 118px;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 56px;
+    color: #59564D;
+}
+
+.cabinet-ques {
+    padding-top: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    color: #59564D;
+}
