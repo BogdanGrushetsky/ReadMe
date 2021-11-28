@@ -5,9 +5,13 @@ import dashboard from "./../../../../img/Menu/dashboard.svg"
 import people from "./../../../../img/Menu/people.svg"
 import settings from "././../../../../img/Menu/settings.svg"
 
+import { useNavigate } from 'react-router-dom'
+
 const MenuItem = (props) => {
+   const navigate = useNavigate();
+
   return (
-  <div className="Menu__item">
+  <div  onClick={() => navigate(props.nav)} className="Menu__item">
     <img src={props.src}/>
   </div>
   )
@@ -19,9 +23,9 @@ const Menu = (props) => {
       <div className="Menu__User">
         <img src={user_placeholder}/>
       </div>
-      <MenuItem src={dashboard} />
-      <MenuItem src={people} />
-      <MenuItem src={settings} />
+      <MenuItem src={dashboard} nav={`/cabinet`} />
+      <MenuItem src={people} nav={`/tasks`}/>
+      <MenuItem src={settings} nav={`/settings`}/>
     </div>
   )
 }

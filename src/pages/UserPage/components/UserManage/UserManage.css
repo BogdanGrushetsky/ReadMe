@@ -67,9 +67,13 @@
 
   width: 700px;
 
+  height: 40px;
+
   border: none;
 
   background: rgba(255, 255, 255, 0.6);
+
+  padding-left: 30px;
 }
 
 .UserManage__container_children {

@@ -1,10 +1,10 @@
 import React from 'react';
 import Login from "./Login/Login";
-import background from '../../img/background-login.png'
+import './LoginPage.css'
 
 const LoginPage = ({setActive, removeLogin}) => {
     return (
-        <div>
+        <div className='login-container'>
             <Login setActive={setActive} removeLogin={removeLogin}/>
         </div>
     );
